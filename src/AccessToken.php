@@ -3,10 +3,10 @@ declare(strict_types=1);
 
 namespace EasyDingTalk;
 
-class AccessToken
+class AccessToken extends Base
 {
     public static function getToken()
     {
-
+        var_dump(self::$config);
     }
 }

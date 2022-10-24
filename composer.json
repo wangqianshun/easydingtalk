@@ -1,13 +1,14 @@
 {
     "name": "wqs/easydingtalk",
-    "description": "EasyDingTalk Package for PHP",
+    "description": "EasyDingTalk Package for thinkphp6",
     "type": "library",
     "license": "MIT",
     "keywords": [
-        "easydingtalk"
+        "easydingtalk",
+        "thinkphp6 easydingtalk"
     ],
     "require": {
-        "php": "^7.3.0"
+        "topthink/framework": "^6.0.0"
     },
     "autoload": {
         "psr-4": {
@@ -23,7 +24,7 @@
     ],
     "minimum-stability": "dev",
     "extra": {
-        "artisan": {
+        "think": {
             "config": {
                 "easydingtalk": "src/config/easydingtalk.php"
             }

@@ -1,0 +1,33 @@
+{
+    "name": "wqs/easydingtalk",
+    "description": "EasyDingTalk Package for thinkphp6",
+    "type": "library",
+    "license": "MIT",
+    "keywords": [
+        "easydingtalk",
+        "thinkphp6 easydingtalk"
+    ],
+    "require": {
+        "topthink/framework": "^6.0.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Easydingtalk\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "初心",
+            "email": "420029810@qq.com",
+            "homepage": "https://github.com/wangqianshun/easydingtalk"
+        }
+    ],
+    "minimum-stability": "dev",
+    "extra": {
+        "think": {
+            "config": {
+                "easydingtalk": "src/config/easydingtalk.php"
+            }
+        }
+    }
+}

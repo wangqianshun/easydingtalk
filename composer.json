@@ -23,7 +23,7 @@
     ],
     "minimum-stability": "dev",
     "extra": {
-        "think": {
+        "artisan": {
             "config": {
                 "easydingtalk": "src/config/easydingtalk.php"
             }

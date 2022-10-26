@@ -13,7 +13,11 @@ class AccessToken extends Base
     public function getToken() : string
     {
         // 以数组的形式返回关于文件路径的信息
+<<<<<<< HEAD
         $file_info = pathinfo(self::$app_config['access_token']['file_path']);
+=======
+        $file_info = pathinfo(self::$app_config['access_token_file_path']);
+>>>>>>> b608dbc8978de0461d22abac38bd1bb580af2071
         // 拼接token路径信息
         $file_path_info = $file_info['dirname'].'/'.$file_info['basename'];
         // 文件是否存在
@@ -31,7 +35,11 @@ class AccessToken extends Base
             // json转数组
             $token = json_decode($json, true);
             // 判断是否到期
+<<<<<<< HEAD
             if (($token['expires_in'] - self::$app_config['access_token']['expires']) < time()) {
+=======
+            if (($token['expires_in'] - self::$app_config['access_token_expires']) < time()) {
+>>>>>>> b608dbc8978de0461d22abac38bd1bb580af2071
                 // 获取token
                 self::generateToken();
             }
@@ -63,6 +71,10 @@ class AccessToken extends Base
         // 当前时间 + 到期时间
         $token['expires_in'] = $expires_in + time();
         // 写入文件
+<<<<<<< HEAD
         file_put_contents(self::$app_config['access_token']['file_path'], json_encode($token));
+=======
+        file_put_contents(self::$app_config['access_token_file_path'], json_encode($token));
+>>>>>>> b608dbc8978de0461d22abac38bd1bb580af2071
     }
 }

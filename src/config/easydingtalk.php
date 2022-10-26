@@ -18,6 +18,7 @@ return [
         /**
          * TODO 当前应用的access_token信息
          */
+<<<<<<< HEAD
         'access_token' => [
             // access_token的提前超时重新获取时间，单位秒
             'expires' => 180,
@@ -34,6 +35,12 @@ return [
             // 当前应用的签名
             'token' => 'Yu6bwoS6E5gKLIn4wZYM9ru4K3L'
         ],
+=======
+        // access_token的提前超时重新获取时间，单位秒
+        'access_token_expires' => 180,
+        // access_token的文件路径，建议填写绝对路径
+        'access_token_file_path' => public_path().'/access_token.json'
+>>>>>>> b608dbc8978de0461d22abac38bd1bb580af2071
     ],
     'api' => [
         // 请求域名
@@ -55,8 +62,11 @@ return [
             'getsendresult' => '/topapi/message/corpconversation/getsendresult',
             'recall' => '/topapi/message/corpconversation/recall'
         ],
+<<<<<<< HEAD
 
         // 获取推送失败的事件列表
         'callback_failed_lists'=>'/call_back/get_call_back_failed_result'
+=======
+>>>>>>> b608dbc8978de0461d22abac38bd1bb580af2071
     ]
 ];

@@ -6,17 +6,55 @@ namespace Composer\Autoload;
 
 class ComposerStaticInit6430eead2b20140d7faf21a4f88bf2a5
 {
+    public static $files = array (
+        '9b552a3cc426e3287cc811caefa3cf53' => __DIR__ . '/..' . '/topthink/think-helper/src/helper.php',
+        '35fab96057f1bf5e7aba31a8a6d5fdde' => __DIR__ . '/..' . '/topthink/think-orm/stubs/load_stubs.php',
+    );
+
     public static $prefixLengthsPsr4 = array (
-        'E' => 
+        't' => 
         array (
-            'Easydingtalk\\' => 13,
+            'think\\' => 6,
+        ),
+        'e' => 
+        array (
+            'easydingtalk\\' => 13,
+        ),
+        'P' => 
+        array (
+            'Psr\\SimpleCache\\' => 16,
+            'Psr\\Log\\' => 8,
+            'Psr\\Http\\Message\\' => 17,
+            'Psr\\Container\\' => 14,
         ),
     );
 
     public static $prefixDirsPsr4 = array (
-        'Easydingtalk\\' => 
+        'think\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/topthink/framework/src/think',
+            1 => __DIR__ . '/..' . '/topthink/think-helper/src',
+            2 => __DIR__ . '/..' . '/topthink/think-orm/src',
+        ),
+        'easydingtalk\\' => 
         array (
             0 => __DIR__ . '/../..' . '/src',
+        ),
+        'Psr\\SimpleCache\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/psr/simple-cache/src',
+        ),
+        'Psr\\Log\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/psr/log/Psr/Log',
+        ),
+        'Psr\\Http\\Message\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/psr/http-message/src',
+        ),
+        'Psr\\Container\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/psr/container/src',
         ),
     );
 

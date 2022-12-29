@@ -6,5 +6,10 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-    'Easydingtalk\\' => array($baseDir . '/src'),
+    'think\\' => array($vendorDir . '/topthink/framework/src/think', $vendorDir . '/topthink/think-helper/src', $vendorDir . '/topthink/think-orm/src'),
+    'easydingtalk\\' => array($baseDir . '/src'),
+    'Psr\\SimpleCache\\' => array($vendorDir . '/psr/simple-cache/src'),
+    'Psr\\Log\\' => array($vendorDir . '/psr/log/Psr/Log'),
+    'Psr\\Http\\Message\\' => array($vendorDir . '/psr/http-message/src'),
+    'Psr\\Container\\' => array($vendorDir . '/psr/container/src'),
 );

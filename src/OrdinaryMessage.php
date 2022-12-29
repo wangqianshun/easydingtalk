@@ -3,7 +3,9 @@ declare(strict_types=1);
 
 namespace Easydingtalk;
 
-class OrdinaryMessage extends Base
+use Easydingtalk\common\Config;
+
+class OrdinaryMessage
 {
     /**
      * @title 发送消息到企业群
@@ -17,7 +19,7 @@ class OrdinaryMessage extends Base
     {
 
         // 请求url
-        $uri = self::$api_config['ordinary_message']['send_to_conversation'];
+        $uri = Config::getApi()['ordinary_message']['send_to_conversation'];
 
         // 请求参数
         $json =[

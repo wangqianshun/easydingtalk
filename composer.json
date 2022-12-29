@@ -1,10 +1,11 @@
 {
     "name": "wqs/easydingtalk",
-    "description": "EasyDingTalk Package for thinkphp6",
+    "description": "EasyDingTalk Package for PHP",
     "type": "library",
     "license": "MIT",
     "keywords": [
         "easydingtalk",
+        "php easydingtalk",
         "thinkphp6 easydingtalk"
     ],
     "require": {
@@ -12,7 +13,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Easydingtalk\\": "src/"
+            "easydingtalk\\": "src/"
         }
     },
     "authors": [

@@ -14,7 +14,6 @@ class OA
     /**
      * 获取表单 schema
      *
-     * @author 初心
      * @param string $processCode
      * @return mixed
      */
@@ -38,7 +37,6 @@ class OA
     /**
      * 创建或修改审批表单模板
      *
-     * @author 初心
      * @param array $body
      * @return mixed
      */
@@ -54,7 +52,6 @@ class OA
     /**
      * 获取审批单流程中的节点信息
      *
-     * @author 初心
      * @param array $body
      * @return mixed
      */
@@ -69,7 +66,6 @@ class OA
     /**
      * 发起审批实例
      *
-     * @author 初心
      * @param array $body
      * @return mixed
      */
@@ -87,7 +83,6 @@ class OA
     /**
      * 获取单个审批实例详情
      *
-     * @author 初心
      * @param string $processInstanceId
      * @return mixed
      */
@@ -111,7 +106,6 @@ class OA
     /**
      * 转交OA审批任务
      *
-     * @author 初心
      * @param array $body
      * @return mixed
      */
@@ -127,7 +121,6 @@ class OA
     /**
      * 获取审批钉盘空间信息
      *
-     * @author 初心
      * @param string $userId
      * @return mixed
      */
@@ -151,7 +144,6 @@ class OA
     /**
      * 添加审批评论
      *
-     * @author 初心
      * @param array $body
      * @return mixed
      */
@@ -167,7 +159,6 @@ class OA
     /**
      * 同意或拒绝审批任务
      *
-     * @author 初心
      * @param array $body
      * @return mixed
      */
@@ -183,7 +174,6 @@ class OA
     /**
      * 撤销审批实例
      *
-     * @author 初心
      * @param array $body
      * @return mixed
      */
@@ -199,7 +189,6 @@ class OA
     /**
      * 授权预览审批附件
      *
-     * @author 初心
      * @param array $body
      * @return mixed
      */
@@ -218,7 +207,6 @@ class OA
     /**
      * 授权下载审批钉盘文件
      *
-     * @author 初心
      * @param array $body
      * @return mixed
      */
@@ -234,14 +222,12 @@ class OA
     /**
      * 下载审批附件
      *
-     * @author 初心
      * @param string $processInstanceId
      * @param string $fileId
      * @return mixed
      */
     public static function fileDownload(string $processInstanceId, string $fileId)
     {
-
         // 请求地址
         $uri = Config::getApi()['oa']['process_instances_spaces_files_urls_download'];
 
@@ -252,5 +238,84 @@ class OA
         ];
         // 发起请求
         return ApiRequest::post_v1($uri, $body);
+    }
+
+    /**
+     * 获取用户待审批数量
+     *
+     * @param string $userId
+     * @return mixed
+     */
+    public static function tasksNumber(string $userId)
+    {
+        // 请求地址
+        $uri = Config::getApi()['oa']['todo_tasks_numbers'];
+
+        // 参数
+        $params = [
+            'userId' => $userId
+        ];
+
+        // 数据拼接
+        $uri = ApiRequest::joinParams($uri, $params);
+
+        // 发起请求
+        return ApiRequest::get_v1($uri);
+    }
+
+    /**
+     * 获取审批实例ID列表
+     *
+     * @param array $body
+     * @return mixed
+     */
+    public static function query(array $body)
+    {
+        // 请求地址
+        $uri = Config::getApi()['oa']['instance_ids_query'];
+
+        // 发起请求
+        return ApiRequest::post_v1($uri, $body);
+    }
+
+    /**
+     * 获取指定用户可见的审批表单列表
+     *
+     * @param array $params
+     * @return mixed
+     */
+    public static function templatesUserVisibilities(array $params)
+    {
+        // 请求地址
+        $uri = Config::getApi()['oa']['user_visibilities_templates'];
+
+        // 数据拼接
+        $uri = ApiRequest::joinParams($uri, $params);
+
+        // 发起请求
+        return ApiRequest::get_v1($uri);
+    }
+
+    /**
+     * 获取当前企业所有可管理的表单
+     *
+     * @param string $userId
+     * @return mixed
+     */
+    public static function templatesManagements(string $userId)
+    {
+        // 请求地址
+        $uri = Config::getApi()['oa']['managements_templates'];
+
+        // 参数
+        $params = [
+            'userId' => $userId
+        ];
+
+        // 数据拼接
+        $uri = ApiRequest::joinParams($uri, $params);
+
+        // 发起请求
+        return ApiRequest::get_v1($uri);
     }
 }

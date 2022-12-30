@@ -3,8 +3,12 @@ declare(strict_types=1);
 
 namespace Easydingtalk;
 
+use Easydingtalk\common\ApiRequest;
 use Easydingtalk\common\Config;
 
+/**
+ * 普通消息
+ */
 class OrdinaryMessage
 {
     /**
@@ -15,7 +19,7 @@ class OrdinaryMessage
      * @param array $msg
      * @return mixed
      */
-    public function sendMessage(string $sender, string $cid, array $msg)
+    public static function sendMessage(string $sender, string $cid, array $msg)
     {
 
         // 请求url

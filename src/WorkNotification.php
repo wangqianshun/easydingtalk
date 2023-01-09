@@ -59,13 +59,13 @@ class WorkNotification
         $uri = Config::getApi()['work_notification']['get_send_progress'];
 
         // 参数
-        $json = [
+        $body = [
             'agent_id' => Config::getApp()['agent_id'],
             'task_id' => $task_id
         ];
 
         // 发送请求
-        return ApiRequest::post($uri, $json);
+        return ApiRequest::post($uri, $body);
     }
 
     /**
@@ -80,13 +80,13 @@ class WorkNotification
         $uri = Config::getApi()['work_notification']['get_send_result'];
 
         // 参数
-        $json = [
+        $body = [
             'agent_id' => Config::getApp()['agent_id'],
             'task_id' => $task_id
         ];
 
         // 发送请求
-        return ApiRequest::post($uri, $json);
+        return ApiRequest::post($uri, $body);
     }
 
     /**
@@ -101,12 +101,12 @@ class WorkNotification
         $uri = Config::getApi()['work_notification']['recall'];
 
         // 参数
-        $json = [
+        $body = [
             'agent_id' => Config::getApp()['agent_id'],
             'msg_task_id' => $msg_task_id
         ];
 
         // 发送请求
-        return ApiRequest::post($uri, $json);
+        return ApiRequest::post($uri, $body);
     }
 }

@@ -76,6 +76,20 @@ class ApiRequest
     }
 
     /**
+     * @title put请求（新版服务端API）
+     *
+     * @param string $uri
+     * @param array $json
+     * @param boolean $has_token
+     * @return mixed
+     */
+    public static function put_v1(string $uri, array $json = [], bool $has_token = true)
+    {
+        // 发起post请求
+        return self::http_request_v1('put', $uri, $json, $has_token);
+    }
+
+    /**
      * @title HTTP请求
      *
      * @param string $method
@@ -153,7 +167,7 @@ class ApiRequest
             curl_setopt($ch, CURLOPT_TIMEOUT, 2);
             curl_setopt($ch, CURLOPT_CUSTOMREQUEST, $method);
 
-            if(!empty($body) && $method=='POST'){
+            if(!empty($body) && ($method=='POST' || $method=='PUT')){
 
                 curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($body));
             }

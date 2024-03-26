@@ -597,5 +597,5 @@ class GroupManagement
 
         // 发送请求
         return ApiRequest::post_v1($uri, $body);
-    }Checkin
+    }
 }

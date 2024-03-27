@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Easydingtalk\util\encrypt;
+namespace easydingtalk\util\Encrypt;
 
 /**
  * error code 说明.

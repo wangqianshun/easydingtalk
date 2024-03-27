@@ -1,18 +1,17 @@
 <?php
 declare(strict_types=1);
 
-namespace Easydingtalk\attendance;
+namespace easydingtalk\api\Attendance;
 
 use Easydingtalk\common\ApiRequest;
 use Easydingtalk\common\Config;
-
-use Easydingtalk\util\Time;
+use easydingtalk\util\Time;
 
 /**
  * 假勤审批
  *
  * Class Approve
- * @package Easydingtalk\attendance
+ * @package easydingtalk\api\Attendance
  */
 class Approve
 {

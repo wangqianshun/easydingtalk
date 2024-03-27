@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Easydingtalk\DocumentFile;
+namespace easydingtalk\api\DocumentFile;
 
 use Easydingtalk\common\ApiRequest;
 use Easydingtalk\common\Config;
@@ -10,7 +10,7 @@ use Easydingtalk\common\Config;
  * 文件管理
  *
  * Class File
- * @package Easydingtalk\DocumentFile
+ * @package easydingtalk\api\DocumentFile
  * @author: 王乾顺
  * @time: 2023-09-18 17:12:40
  */

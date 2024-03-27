@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Easydingtalk\attendance;
+namespace easydingtalk\api\Attendance;
 
 use Easydingtalk\common\ApiRequest;
 use Easydingtalk\common\Config;
@@ -10,7 +10,7 @@ use Easydingtalk\common\Config;
  * 考勤机管理
  *
  * Class SmartDevice
- * @package Easydingtalk\attendance
+ * @package easydingtalk\api\Attendance
  */
 class SmartDevice
 {

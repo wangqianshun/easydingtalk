@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Easydingtalk\attendance;
+namespace easydingtalk\api\Attendance;
 
 use Easydingtalk\common\ApiRequest;
 use Easydingtalk\common\Config;
@@ -11,7 +11,7 @@ use Easydingtalk\util\Time;
  * 假期管理
  *
  * Class VacationManagement
- * @package Easydingtalk\attendance
+ * @package easydingtalk\api\Attendance
  */
 class VacationManagement
 {

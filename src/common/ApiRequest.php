@@ -4,7 +4,6 @@ declare(strict_types=1);
 namespace Easydingtalk\common;
 
 use Exception;
-use Easydingtalk\common\AccessToken;
 
 class ApiRequest
 {
@@ -24,7 +23,6 @@ class ApiRequest
         }
         // 发起get请求
         return self::http_request('get', $uri, $query, $has_token);
-
     }
 
     /**
@@ -44,7 +42,6 @@ class ApiRequest
 
         // 发起get请求
         return self::http_request_v1('get', $uri, $query, $has_token);
-
     }
 
     /**

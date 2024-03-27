@@ -57,7 +57,7 @@ class Config
     public static function setAppType(string $appName)
     {
         self::$app_type = $appName;
-        return new Self;
+        return new self;
     }
 
     /**
@@ -69,7 +69,7 @@ class Config
     public static function setApiType(string $apiName)
     {
         self::$api_type = $apiName;
-        return new Self;
+        return new self;
     }
 
     /**
@@ -81,7 +81,7 @@ class Config
     public static function setRobotType(string $robotType)
     {
         self::$robot_type = $robotType;
-        return new Self;
+        return new self;
     }
 
     /**
@@ -93,7 +93,7 @@ class Config
     public static function setCorpId(string $corp_id)
     {
         self::$corp_id = $corp_id;
-        return new Self;
+        return new self;
     }
 
     /**
@@ -105,7 +105,7 @@ class Config
     public static function setApp(array $apps)
     {
         self::$app_info = $apps;
-        return new Self;
+        return new self;
     }
 
     /**
@@ -117,7 +117,7 @@ class Config
     public static function setRobot(array $robots)
     {
         self::$robot_info = $robots;
-        return new Self;
+        return new self;
     }
 
     /**
@@ -125,7 +125,8 @@ class Config
      *
      * @return array
      */
-    public static function getApp(){
+    public static function getApp()
+    {
         return self::$app_info[self::$app_type];
     }
 
@@ -134,16 +135,18 @@ class Config
      *
      * @return array
      */
-    public static function getApi(){
+    public static function getApi()
+    {
         return self::$app_info[self::$api_type];
     }
 
-     /**
+    /**
      * 获取当前机器人应用配置信息
      *
      * @return array
      */
-    public static function getRobot(){
+    public static function getRobot()
+    {
         return self::$robot_info[self::$robot_type];
     }
 
@@ -152,7 +155,8 @@ class Config
      *
      * @return string
      */
-    public static function getCorpId(){
+    public static function getCorpId()
+    {
         return self::$corp_id;
     }
 }

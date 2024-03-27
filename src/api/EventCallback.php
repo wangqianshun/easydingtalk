@@ -1,11 +1,11 @@
 <?php
 declare(strict_types=1);
 
-namespace Easydingtalk;
+namespace easydingtalk\api;
 
 use Easydingtalk\common\ApiRequest;
 use Easydingtalk\common\Config;
-use Easydingtalk\util\encrypt\DingCallbackCrypto;
+use easydingtalk\util\encrypt\DingCallbackCrypto;
 
 class EventCallback
 {

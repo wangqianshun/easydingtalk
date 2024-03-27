@@ -3,9 +3,6 @@ declare(strict_types=1);
 
 namespace Easydingtalk\common;
 
-use Easydingtalk\common\Config;
-use Easydingtalk\common\ApiRequest;
-
 class AccessToken
 {
     /**

@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Easydingtalk\DocumentFile\StorageManagement;
+namespace easydingtalk\api\DocumentFile\StorageManagement;
 
 use Easydingtalk\common\ApiRequest;
 use Easydingtalk\common\Config;

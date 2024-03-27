@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Easydingtalk\DingSpace;
+namespace easydingtalk\api\DingSpace;
 
 use Easydingtalk\common\ApiRequest;
 use Easydingtalk\common\Config;
